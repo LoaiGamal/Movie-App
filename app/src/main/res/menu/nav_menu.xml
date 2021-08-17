@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/topRating"
+        android:icon="@drawable/ic_baseline_star_24"
+        android:title="@string/topRating"/>
+
+    <item
+        android:id="@+id/nowPlaying"
+        android:icon="@drawable/ic_baseline_fast_forward_24"
+        android:title="@string/nowPlaying" />
+
+    <item
+        android:id="@+id/upComing"
+        android:icon="@drawable/ic_baseline_update_24"
+        android:title="@string/upComing"/>
+
+</menu>

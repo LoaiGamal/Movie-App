@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_host"
+    app:startDestination="@id/topRating">
+
+    <fragment
+        android:id="@+id/topRating"
+        android:name="com.example.android.imdbdemo.ui.topRated.TopRatedFragment"
+        android:label="fragment_top_rated"
+        tools:layout="@layout/fragment_top_rated" >
+        <action
+            android:id="@+id/action_topRating_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.example.android.imdbdemo.ui.details.DetailsFragment"
+        android:label="DetailsFragment" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/upComing"
+        android:name="com.example.android.imdbdemo.ui.upComing.UpcomingFragment"
+        android:label="fragment_upcoming"
+        tools:layout="@layout/fragment_upcoming" >
+        <action
+            android:id="@+id/action_upcomingFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nowPlaying"
+        android:name="com.example.android.imdbdemo.ui.nowPlaying.NowPlayingFragment"
+        android:label="fragment_now_playing"
+        tools:layout="@layout/fragment_now_playing" >
+        <action
+            android:id="@+id/action_nowPlaying_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchingFragment"
+        android:name="com.example.android.imdbdemo.ui.searching.SearchingFragment"
+        android:label="fragment_searching"
+        tools:layout="@layout/fragment_searching" >
+        <argument android:name="searchQuery"
+            app:argType="string"
+            app:nullable="true" />
+        <action
+            android:id="@+id/action_searchingFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_searchingFragment_to_tvDetailsFragment"
+            app:destination="@id/tvDetailsFragment" />
+        <action
+            android:id="@+id/action_searchingFragment_to_personFragment"
+            app:destination="@id/personFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tvDetailsFragment"
+        android:name="com.example.android.imdbdemo.ui.tvDetails.TvDetailsFragment"
+        android:label="fragment_tv_details"
+        tools:layout="@layout/fragment_tv_details" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/personFragment"
+        android:name="com.example.android.imdbdemo.ui.personDetails.PersonFragment"
+        android:label="fragment_person"
+        tools:layout="@layout/fragment_person" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </fragment>
+</navigation>
