@@ -51,7 +51,7 @@ class DetailsFragment : Fragment(R.layout.fragment_details) {
             .into(coverImage)
 
         rating.text = detail.voteAverage.toString()
-        mTitle.text = detail.title
+        mTitle.text = detail.originalTitle
         overViewContent.text = detail.overview
         languageContent.text = detail.originalLanguage
         dateContent.text = detail.releaseDate

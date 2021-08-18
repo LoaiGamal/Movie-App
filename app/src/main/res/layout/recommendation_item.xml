@@ -28,7 +28,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:textSize="14sp" />
+            android:textSize="18sp" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/movieRating"
@@ -38,6 +38,8 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:drawablePadding="3dp"
             android:drawableStart="@drawable/ic_baseline_star_24"
             app:drawableTint="#F5C518"/>
 

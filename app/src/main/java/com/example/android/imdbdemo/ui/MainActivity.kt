@@ -23,6 +23,10 @@ class MainActivity : AppCompatActivity() {
         bottomNavView.setupWithNavController(navController)
 
 
+        searchBar.setOnClickListener {
+            searchBar.isCursorVisible = true
+        }
+
         searchBar.setOnKeyListener(object : View.OnKeyListener {
             override fun onKey(v: View?, keyCode: Int, event: KeyEvent?): Boolean {
                 if (event?.action == KeyEvent.ACTION_DOWN &&
@@ -30,11 +34,11 @@ class MainActivity : AppCompatActivity() {
                 ) {
 
                     val searchingResult = searchBar.text.toString()
-                    val bdl = Bundle()
-                    bdl.putString("searchQuery", searchingResult)
-
-                    navController.navigate(R.id.searchingFragment, bdl)
-
+                    if (searchingResult != "") {
+                        val bdl = Bundle()
+                        bdl.putString("searchQuery", searchingResult)
+                        navController.navigate(R.id.searchingFragment, bdl)
+                    }
                     hideSoftKeyboard()
 
                     searchBar.clearFocus()
@@ -61,17 +65,10 @@ class MainActivity : AppCompatActivity() {
         progressBar.visibility = View.GONE
     }
 
-    fun showSearchBar() {
-        searchBar.visibility = View.VISIBLE
-    }
-
-    fun hideSearchBar() {
-        searchBar.visibility = View.GONE
-    }
-
     fun Activity.hideSoftKeyboard() {
         (getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager).apply {
             hideSoftInputFromWindow(currentFocus?.windowToken, 0)
         }
     }
+
 }
