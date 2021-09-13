@@ -11,10 +11,10 @@ interface TvRepo {
 
 class TvRepoImpl(private val service: TmdbEndPoints) : TvRepo {
     override suspend fun getTvById(id: Int): TvResult {
-        return service.getTvById(id, "15e055caa208cab4ce3a30c8d5ac4a1a")
+        return service.getTvById(id, "your key")
     }
 
     override suspend fun getTvRecommendations(id: Int): BasePagination<TvResult> {
-        return service.getTvRecommendations(id, "15e055caa208cab4ce3a30c8d5ac4a1a")
+        return service.getTvRecommendations(id, "your key")
     }
 }

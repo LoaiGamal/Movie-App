@@ -9,6 +9,6 @@ interface PersonRepo {
 
 class PersonRepoImpl(private val service: TmdbEndPoints): PersonRepo{
     override suspend fun getPerson(id: Int): Person {
-        return service.getPersonById(id, "15e055caa208cab4ce3a30c8d5ac4a1a")
+        return service.getPersonById(id, "your key")
     }
 }
