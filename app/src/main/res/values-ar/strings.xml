@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">IMDb Demo</string>
+    <string name="language">اللغة:</string>
+    <string name="gender">"النوع: "</string>
+    <string name="birthday">"تاريخ الميلاد: "</string>
+    <string name="place_of_birth">"مكان الميلاد: "</string>
+    <string name="biography">السيرة شخصية</string>
+    <string name="no_results_found">لا توجد نتائج بحث</string>
+    <string name="known_for">"مشهور ب: "</string>
+    <string name="personal_info">"معلومات شخصيه: "</string>
+    <string name="search">بحث</string>
+    <string name="overview">"نظرة عامة: "</string>
+    <string name="release_date">"تاريخ النشر: "</string>
+    <string name="topRating">أعلى التقييمات</string>
+    <string name="upComing">القادم</string>
+    <string name="nowPlaying">يعرض الان</string>
+</resources>

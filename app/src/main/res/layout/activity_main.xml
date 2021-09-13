@@ -8,7 +8,7 @@
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/searchBar"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="35dp"
         android:hint="@string/search"
         android:imeOptions="actionSearch"
@@ -16,7 +16,7 @@
         android:maxLines="1"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/english"
         android:background="@drawable/searchbar_editing"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -24,6 +24,37 @@
         android:drawableEnd="@drawable/ic_baseline_search_24"
         android:backgroundTint="#3A3B3C"
         />
+
+
+
+<!--    <androidx.appcompat.widget.AppCompatSpinner-->
+<!--        android:id="@+id/languageSpinner"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="35dp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/english"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        app:layout_constraintStart_toEndOf="@id/searchBar"
+        app:layout_constraintEnd_toStartOf="@id/arabic"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/english"
+        android:layout_marginEnd="5dp"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/arabic"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="@string/arabic"
+        android:layout_marginEnd="8dp"/>
+
+
 
     <fragment
         android:id="@+id/container"
